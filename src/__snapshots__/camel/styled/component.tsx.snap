@@ -1,0 +1,13 @@
+import { FC } from 'react';
+
+import styles from './myTestComponent.module.scss';
+
+interface Props {}
+
+export const MyTestComponent: FC<Props> = () => {
+  return (
+    <div className={styles.myTestComponent}>
+      MyTestComponent
+    </div>
+  );
+};
