@@ -1,4 +1,4 @@
-// This comment will be removed with empty string after
+// Template for React component file
 
 import { FC } from 'react';
 
@@ -8,7 +8,7 @@ interface Props {}
 
 export const ${componentName}: FC<Props> = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.${className}}>
       ${componentName}
     </div>
   );

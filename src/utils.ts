@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as vscode from 'vscode';
+import { ECommands } from './constants';
 
 export const readAndCleanTemplate = (templatePath: string): string => {
   const content = fs.readFileSync(templatePath, 'utf8');
@@ -19,9 +20,9 @@ const createOpenTemplateCommand = (context: vscode.ExtensionContext, commandId: 
   };
 
 export const registerTemplateOpenCommands = (context: vscode.ExtensionContext) => {
-  const openComponentTemplateCmd = createOpenTemplateCommand(context, 'componentGenerator.openComponentTemplate', 'component.template');
-  const openStyleTemplateCmd = createOpenTemplateCommand(context, 'componentGenerator.openStyleTemplate', 'style.template');
-  const openIndexTemplateCmd = createOpenTemplateCommand(context, 'componentGenerator.openIndexTemplate', 'index.template');
+  const openComponentTemplateCmd = createOpenTemplateCommand(context, ECommands.OpenComponentTemplate, 'component.template');
+  const openStyleTemplateCmd = createOpenTemplateCommand(context, ECommands.OpenStyleTemplate, 'style.template');
+  const openIndexTemplateCmd = createOpenTemplateCommand(context, ECommands.OpenIndexTemplate, 'index.template');
 
   context.subscriptions.push(
     openComponentTemplateCmd,

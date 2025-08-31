@@ -1,11 +1,13 @@
+
 import * as fs from 'fs';
 import * as path from 'path';
 import * as vscode from 'vscode';
+import { ECommands, EConfigKey } from './constants';
 import { formatName, toPascalCase } from './formatters';
 import { readAndCleanTemplate, registerTemplateOpenCommands } from './utils';
 
 export function activate(context: vscode.ExtensionContext) {
-  const disposable = vscode.commands.registerCommand('extension.generateComponent', async (uri: vscode.Uri) => {
+  const disposable = vscode.commands.registerCommand(ECommands.GenerateFIles, async (uri: vscode.Uri) => {
     if (!uri || !uri.fsPath) {
       vscode.window.showErrorMessage('Please use the context menu on a folder.');
       return;
@@ -14,7 +16,7 @@ export function activate(context: vscode.ExtensionContext) {
     const folderPath = uri.fsPath;
     const baseName = path.basename(folderPath);
 
-    const config = vscode.workspace.getConfiguration('componentGenerator');
+    const config = vscode.workspace.getConfiguration(EConfigKey.Root);
     const fileExt = config.get<string>('fileExtension', 'tsx');
     const styleExt = config.get<string>('styleExtension', 'scss');
     const createIndexFile = config.get<boolean>('createIndexFile', true);
@@ -23,6 +25,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     const componentName = toPascalCase(baseName);
     const fileName = formatName(baseName, fileNameCase);
+    const className = formatName(baseName, 'camelCase'); // Всегда camelCase для стилей
 
     try {
       // Пути к файлам шаблонов в папке dist, куда их копирует esbuild
@@ -31,7 +34,8 @@ export function activate(context: vscode.ExtensionContext) {
       const componentContent = componentTemplate
         .replace(/\$\{componentName\}/g, componentName)
         .replace(/\$\{fileName\}/g, fileName)
-        .replace(/\$\{styleExtension\}/g, styleExt);
+        .replace(/\$\{styleExtension\}/g, styleExt)
+        .replace(/\$\{className\}/g, className); // Используем новую переменную для класса
 
       const componentPath = path.join(folderPath, `${fileName}.${fileExt}`);
       if (!fs.existsSync(componentPath)) {
@@ -44,8 +48,7 @@ export function activate(context: vscode.ExtensionContext) {
         const styleTemplatePath = path.join(context.extensionPath, 'dist', 'templates', 'style.template');
         const styleTemplate = readAndCleanTemplate(styleTemplatePath);
         const styleContent = styleTemplate
-          .replace(/\$\{componentName\}/g, componentName)
-          .replace(/\$\{fileName\}/g, formatName(baseName, 'camelCase'));
+          .replace(/\$\{className\}/g, className); // Используем ту же переменную
         const stylePath = path.join(folderPath, `${fileName}.module.${styleExt}`);
 
         if (!fs.existsSync(stylePath)) {
