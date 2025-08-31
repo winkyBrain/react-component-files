@@ -53,10 +53,17 @@ You can easily edit the templates used for file generation. Open the command pal
 Alternatively, you can find clickable links in the extension's settings UI.
 
 The following placeholders are available in the templates:
+#### For `component.template`:
+-   `${componentName}`: The name of the component in `PascalCase` (e.g., `MyButton`).
+-   `${styleImportBlock}`: A block for the style import. Automatically adds `import styles from './...'` if `createStyleFile` is enabled, otherwise it's an empty string.
+-   `${classNameProp}`: The `className` attribute for the root element. Automatically adds ` className={styles.yourClassName}` if `createStyleFile` is enabled, otherwise it's an empty string.
+
+#### For `style.template`:
+-   `${className}`: The CSS class name, always in `camelCase` (e.g., `myButton`).
+
+#### For `index.template`:
 -   `${componentName}`: The name of the component in `PascalCase` (e.g., `MyButton`).
 -   `${fileName}`: The base name for the files, formatted according to the `fileNameCase` setting (e.g., `myButton` or `my-button`).
--   `${className}`: The CSS class name, always in `camelCase` (e.g., `myButton`).
--   `${styleExtension}`: The chosen extension for the style file (e.g., `scss`).
 
 ## Development and Local Installation
 

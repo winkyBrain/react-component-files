@@ -2,7 +2,7 @@
   "name": "react-component-files",
   "displayName": "React Component Files",
   "description": "Quickly generate React component files from a folder.",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "publisher": "winkyBrain",
   "repository": {
     "type": "git",

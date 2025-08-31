@@ -31,11 +31,20 @@ export function activate(context: vscode.ExtensionContext) {
       // Пути к файлам шаблонов в папке dist, куда их копирует esbuild
       const componentTemplatePath = path.join(context.extensionPath, 'dist', 'templates', 'component.template');
       const componentTemplate = readAndCleanTemplate(componentTemplatePath);
+
+      let styleImportBlock = '';
+      let classNameProp = '';
+
+      if (createStyleFile) {
+        // Включаем пустую строку (первый \n) и сам импорт
+        styleImportBlock = `\nimport styles from './${fileName}.module.${styleExt}';\n`;
+        classNameProp = ` className={styles.${className}}`;
+      }
+
       const componentContent = componentTemplate
         .replace(/\$\{componentName\}/g, componentName)
-        .replace(/\$\{fileName\}/g, fileName)
-        .replace(/\$\{styleExtension\}/g, styleExt)
-        .replace(/\$\{className\}/g, className); // Используем новую переменную для класса
+        .replace(/\$\{styleImportBlock\}/g, styleImportBlock)
+        .replace(/\$\{classNameProp\}/g, classNameProp);
 
       const componentPath = path.join(folderPath, `${fileName}.${fileExt}`);
       if (!fs.existsSync(componentPath)) {
