@@ -52,6 +52,8 @@ You can easily edit the templates used for file generation. Open the command pal
 
 Alternatively, you can find clickable links in the extension's settings UI.
 
+> **Note on using `.jsx`:** The default component template includes TypeScript syntax (e.g., `FC` type). If you set the `fileExtension` to `jsx`, you should edit the component template to remove any TypeScript-specific code. Use the `Component Generator: Edit Component Template` command to do this.
+
 The following placeholders are available in the templates:
 #### For `component.template`:
 -   `${componentName}`: The name of the component in `PascalCase` (e.g., `MyButton`).
