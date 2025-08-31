@@ -51,6 +51,38 @@ The following placeholders are available in the templates:
 -   `${className}`: The CSS class name, always in `camelCase` (e.g., `myButton`).
 -   `${styleExtension}`: The chosen extension for the style file (e.g., `scss`).
 
+## Development and Local Installation
+
+Since this extension is not yet published on the VS Code Marketplace, you can build and install it locally by following these steps.
+
+1.  **Clone the repository:**
+    *(Replace with your actual repository URL)*
+    ```bash
+    git clone https://github.com/your-username/your-repo-name.git
+    ```
+    ```bash
+    cd your-repo-name
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Package the extension:**
+    This command will compile the source code and create a `.vsix` package file in the project root.
+    ```bash
+    npm run package
+    ```
+
+4.  **Install in VS Code:**
+    -   Open Visual Studio Code.
+    -   Go to the **Extensions** view (or press `Ctrl+Shift+X`).
+    -   Click the **...** (More Actions) menu in the top-right corner of the view.
+    -   Select **Install from VSIX...**.
+    -   Find and select the `.vsix` file generated in the previous step (e.g., `react-component-files-0.0.5.vsix`).
+    -   Reload VS Code when prompted.
+
 ## Release Notes
 
 See [CHANGELOG.md](CHANGELOG.md) for details on each release.
