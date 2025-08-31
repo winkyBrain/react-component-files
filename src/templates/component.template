@@ -1,14 +1,12 @@
 // Template for React component file
 
 import { FC } from 'react';
-
-import styles from './${fileName}.module.${styleExtension}';
-
+${styleImportBlock}
 interface Props {}
 
 export const ${componentName}: FC<Props> = () => {
   return (
-    <div className={styles.${className}}>
+    <div${classNameProp}>
       ${componentName}
     </div>
   );
