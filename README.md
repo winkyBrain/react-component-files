@@ -58,14 +58,14 @@ Since this extension is not yet published on the VS Code Marketplace, you can bu
 1.  **Clone the repository:**
     *(Replace with your actual repository URL)*
     ```bash
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/winkyBrain/react-component-files.git)
+    git clone https://github.com/winkyBrain/react-component-files.git
     ```
     or with SSH
     ```bash
     git clone git@github.com:winkyBrain/react-component-files.git
     ```
     ```bash
-    cd your-repo-name
+    cd react-component-files
     ```
 
 3.  **Install dependencies:**
