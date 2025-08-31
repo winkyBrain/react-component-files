@@ -1,0 +1,15 @@
+.vscode/**
+.vscode-test/**
+node_modules/**
+src/**
+testComp/**
+
+# Игнорируем файлы конфигурации и сборки
+esbuild.js
+tsconfig.json
+.gitignore
+package-lock.json
+yarn.lock
+
+# Игнорируем иконку в корне, так как она копируется в dist
+icon.png

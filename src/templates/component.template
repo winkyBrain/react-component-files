@@ -1,0 +1,15 @@
+// This comment will be removed with empty string after
+
+import { FC } from 'react';
+
+import styles from './${fileName}.module.${styleExtension}';
+
+interface Props {}
+
+export const ${componentName}: FC<Props> = () => {
+  return (
+    <div className={styles.container}>
+      ${componentName}
+    </div>
+  );
+};

@@ -1,0 +1,123 @@
+{
+  "name": "component-generator",
+  "displayName": "React Component Generator",
+  "description": "Quickly generate React component files from a folder.",
+  "version": "0.0.3",
+  "publisher": "winkyBrain",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/your-repo-name.git"
+  },
+  "icon": "dist/icon.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.generateComponent",
+        "title": "⚛️ Generate React Component"
+      },
+      {
+        "command": "componentGenerator.openComponentTemplate",
+        "title": "Component Generator: Edit Component Template"
+      },
+      {
+        "command": "componentGenerator.openStyleTemplate",
+        "title": "Component Generator: Edit Style Template"
+      },
+      {
+        "command": "componentGenerator.openIndexTemplate",
+        "title": "Component Generator: Edit Index Template"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "when": "explorerResourceIsFolder",
+          "command": "extension.generateComponent",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Component Generator",
+      "properties": {
+        "componentGenerator.fileExtension": {
+          "type": "string",
+          "default": "tsx",
+          "enum": [
+            "tsx",
+            "jsx"
+          ],
+          "description": "File extension for generated components.",
+          "order": 0
+        },
+        "componentGenerator.fileNameCase": {
+          "type": "string",
+          "default": "camelCase",
+          "enum": [
+            "camelCase",
+            "PascalCase",
+            "kebab-case",
+            "snake_case"
+          ],
+          "description": "Casing for the component folder and file names.",
+          "order": 1
+        },
+        "componentGenerator.createIndexFile": {
+          "type": "boolean",
+          "default": true,
+          "description": "Create an index file for re-exporting the component.",
+          "order": 2
+        },
+        "componentGenerator.createStyleFile": {
+          "type": "boolean",
+          "default": true,
+          "description": "Create a style file for the component.",
+          "order": 3
+        },
+        "componentGenerator.styleExtension": {
+          "type": "string",
+          "default": "scss",
+          "enum": [
+            "scss",
+            "css",
+            "less",
+            "sass"
+          ],
+          "description": "File extension for generated style modules.",
+          "order": 4
+        },
+        "componentGenerator.editTemplates": {
+          "type": "null",
+          "markdownDescription": "[Edit Component Template](command:componentGenerator.openComponentTemplate)\n\n[Edit Style Template](command:componentGenerator.openStyleTemplate)\n\n[Edit Index Template](command:componentGenerator.openIndexTemplate)",
+          "default": null,
+          "order": 5
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "compile": "node esbuild.js",
+    "build": "node esbuild.js production",
+    "watch": "node esbuild.js watch",
+    "lint": "eslint src --ext ts",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "18.x",
+    "@types/vscode": "^1.82.0",
+    "cpy": "^11.0.0",
+    "esbuild": "^0.20.0",
+    "eslint": "^8.47.0",
+    "typescript": "^5.1.6",
+    "vsce": "^2.15.0"
+  }
+}
