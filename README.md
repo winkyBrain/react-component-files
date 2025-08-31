@@ -58,24 +58,28 @@ Since this extension is not yet published on the VS Code Marketplace, you can bu
 1.  **Clone the repository:**
     *(Replace with your actual repository URL)*
     ```bash
-    git clone https://github.com/your-username/your-repo-name.git
+    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/winkyBrain/react-component-files.git)
+    ```
+    or with SSH
+    ```bash
+    git clone git@github.com:winkyBrain/react-component-files.git
     ```
     ```bash
     cd your-repo-name
     ```
 
-2.  **Install dependencies:**
+3.  **Install dependencies:**
     ```bash
     npm install
     ```
 
-3.  **Package the extension:**
+4.  **Package the extension:**
     This command will compile the source code and create a `.vsix` package file in the project root.
     ```bash
     npm run package
     ```
 
-4.  **Install in VS Code:**
+5.  **Install in VS Code:**
     -   Open Visual Studio Code.
     -   Go to the **Extensions** view (or press `Ctrl+Shift+X`).
     -   Click the **...** (More Actions) menu in the top-right corner of the view.
