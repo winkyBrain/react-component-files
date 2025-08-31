@@ -1,8 +1,8 @@
 {
-  "name": "component-generator",
-  "displayName": "React Component Generator",
+  "name": "react-component-files",
+  "displayName": "React Component Files",
   "description": "Quickly generate React component files from a folder.",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "publisher": "winkyBrain",
   "repository": {
     "type": "git",
@@ -20,19 +20,19 @@
   "contributes": {
     "commands": [
       {
-        "command": "extension.generateComponent",
+        "command": "react-component-files.generateFiles",
         "title": "⚛️ Generate React Component"
       },
       {
-        "command": "componentGenerator.openComponentTemplate",
+        "command": "react-component-files.openComponentTemplate",
         "title": "Component Generator: Edit Component Template"
       },
       {
-        "command": "componentGenerator.openStyleTemplate",
+        "command": "react-component-files.openStyleTemplate",
         "title": "Component Generator: Edit Style Template"
       },
       {
-        "command": "componentGenerator.openIndexTemplate",
+        "command": "react-component-files.openIndexTemplate",
         "title": "Component Generator: Edit Index Template"
       }
     ],
@@ -40,15 +40,15 @@
       "explorer/context": [
         {
           "when": "explorerResourceIsFolder",
-          "command": "extension.generateComponent",
+          "command": "react-component-files.generateFiles",
           "group": "navigation"
         }
       ]
     },
     "configuration": {
-      "title": "Component Generator",
+      "title": "React Component Files",
       "properties": {
-        "componentGenerator.fileExtension": {
+        "react-component-files.fileExtension": {
           "type": "string",
           "default": "tsx",
           "enum": [
@@ -58,7 +58,7 @@
           "description": "File extension for generated components.",
           "order": 0
         },
-        "componentGenerator.fileNameCase": {
+        "react-component-files.fileNameCase": {
           "type": "string",
           "default": "camelCase",
           "enum": [
@@ -70,19 +70,19 @@
           "description": "Casing for the component folder and file names.",
           "order": 1
         },
-        "componentGenerator.createIndexFile": {
+        "react-component-files.createIndexFile": {
           "type": "boolean",
           "default": true,
           "description": "Create an index file for re-exporting the component.",
           "order": 2
         },
-        "componentGenerator.createStyleFile": {
+        "react-component-files.createStyleFile": {
           "type": "boolean",
           "default": true,
           "description": "Create a style file for the component.",
           "order": 3
         },
-        "componentGenerator.styleExtension": {
+        "react-component-files.styleExtension": {
           "type": "string",
           "default": "scss",
           "enum": [
@@ -94,9 +94,9 @@
           "description": "File extension for generated style modules.",
           "order": 4
         },
-        "componentGenerator.editTemplates": {
+        "react-component-files.editTemplates": {
           "type": "null",
-          "markdownDescription": "[Edit Component Template](command:componentGenerator.openComponentTemplate)\n\n[Edit Style Template](command:componentGenerator.openStyleTemplate)\n\n[Edit Index Template](command:componentGenerator.openIndexTemplate)",
+          "markdownDescription": "[Edit Component Template](command:react-component-files.openComponentTemplate)\n\n[Edit Style Template](command:react-component-files.openStyleTemplate)\n\n[Edit Index Template](command:react-component-files.openIndexTemplate)",
           "default": null,
           "order": 5
         }
