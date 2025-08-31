@@ -16,12 +16,19 @@ Quickly generate React component files (component, style, index) directly from t
 
 1.  In the VS Code Explorer, right-click on the folder where you want to create the component.
 2.  Select **"⚛️ Generate React Component"** from the context menu.
-3.  The extension will automatically create the component files based on the folder name and your configured settings.
+3.  The extension will automatically create linked component files based on the folder name and your configured settings.
 
-For example, right-clicking on a folder named `my-button` will generate:
--   `MyButton.tsx` (or `my-button.tsx`, etc., based on your settings)
--   `my-button.module.scss`
+For example, right-clicking on a folder named `my-button` with the default setting `fileNameCase: 'camelCase'` will generate:
+-   `myButton.tsx`
+-   `myButton.module.scss`
 -   `index.ts`
+
+If you set `fileNameCase: 'PascalCase'`, the result will be:
+-   `MyButton.tsx`
+-   `MyButton.module.scss`
+-   `index.ts`
+
+These files already have the necessary code and imports to work together.
 
 ## Configuration
 
