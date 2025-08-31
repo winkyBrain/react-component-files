@@ -2,7 +2,7 @@
   "name": "react-component-files",
   "displayName": "React Component Files",
   "description": "Quickly generate React component files from a folder.",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "publisher": "winkyBrain",
   "repository": {
     "type": "git",
@@ -109,14 +109,18 @@
     "build": "node esbuild.js production",
     "watch": "node esbuild.js watch",
     "lint": "eslint src --ext ts",
-    "package": "vsce package"
+    "package": "vsce package",
+    "test": "jest"
   },
   "devDependencies": {
+    "@types/jest": "^30.0.0",
     "@types/node": "18.x",
     "@types/vscode": "^1.82.0",
     "cpy": "^11.0.0",
     "esbuild": "^0.20.0",
     "eslint": "^8.47.0",
+    "jest": "^30.1.1",
+    "ts-jest": "^29.4.1",
     "typescript": "^5.1.6",
     "vsce": "^2.15.0"
   }
