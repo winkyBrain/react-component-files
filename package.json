@@ -2,8 +2,18 @@
   "name": "react-component-files",
   "displayName": "React Component Files",
   "description": "Quickly generate React component files from a folder.",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "publisher": "winkyBrain",
+  "keywords": [
+    "react",
+    "component",
+    "generator",
+    "template",
+    "typescript",
+    "javascript",
+    "jsx",
+    "tsx"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/winkyBrain/react-component-files.git"
@@ -13,7 +23,7 @@
     "vscode": "^1.85.0"
   },
   "categories": [
-    "Other"
+    "Snippets"
   ],
   "activationEvents": [],
   "main": "./dist/extension.js",
