@@ -3,6 +3,8 @@
 
 Quickly generate React component files (component, style, index) directly from the VS Code explorer context menu. This extension is designed to streamline your workflow by creating a consistent and customizable file structure for your React components.
 
+![Extension Demo](assets/demo.gif)
+
 ## Features
 
 -   **One-Click Generation**: Create a full component structure by right-clicking on a folder.
@@ -51,6 +53,8 @@ You can easily edit the templates used for file generation. Open the command pal
 -   `Component Generator: Edit Index Template`
 
 Alternatively, you can find clickable links in the extension's settings UI.
+
+![Extension Settings](assets/settings.png)
 
 > **Note on using `.jsx`:** The default component template includes TypeScript syntax (e.g., `FC` type). If you set the `fileExtension` to `jsx`, you should edit the component template to remove any TypeScript-specific code. Use the `Component Generator: Edit Component Template` command to do this.
 
