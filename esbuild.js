@@ -20,7 +20,7 @@ async function build() {
   try {
     // Копируем шаблоны и иконку в папку dist
     await cpy('src/templates/**', 'dist/templates');
-    await cpy('icon.png', 'dist');
+    await cpy('assets/icon.png', 'dist');
     console.log('Assets copied.');
 
     if (watch) {

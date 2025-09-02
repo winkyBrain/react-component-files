@@ -2,7 +2,7 @@
   "name": "react-component-files",
   "displayName": "React Component Files",
   "description": "Quickly generate React component files from a folder.",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "publisher": "winkyBrain",
   "keywords": [
     "react",
@@ -18,7 +18,7 @@
     "type": "git",
     "url": "https://github.com/winkyBrain/react-component-files.git"
   },
-  "icon": "dist/icon.png",
+  "icon": "assets/icon.png",
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -120,7 +120,7 @@
     "watch": "node esbuild.js watch",
     "lint": "eslint src --ext ts",
     "package": "vsce package",
-    "test": "jest"
+    "test": "jest --config jest.config.js"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
