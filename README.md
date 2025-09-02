@@ -110,8 +110,6 @@ Since this extension is not yet published on the VS Code Marketplace, you can bu
 ## Release Notes
 
 See [CHANGELOG.md](CHANGELOG.md) for details on each release.
-*(Suggestion: Create a CHANGELOG.md file to track changes)*
-
 ---
 
 Happy Coding!
