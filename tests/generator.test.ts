@@ -1,12 +1,11 @@
 import * as fs from 'fs';
+import { generateComponentFiles, IComponentGenOptions, IGeneratedFile } from '../src/generator';
+import { readAndCleanTemplate } from '../src/utils';
 import * as path from 'path';
-import { generateComponentFiles, IComponentGenOptions, IGeneratedFile } from './generator';
-import { readAndCleanTemplate } from './utils';
-
 describe('generateComponentFiles', () => {
-  const componentTemplate = readAndCleanTemplate(path.resolve(__dirname, 'templates/component.template'));
-  const styleTemplate = readAndCleanTemplate(path.resolve(__dirname, 'templates/style.template'));
-  const indexTemplate = readAndCleanTemplate(path.resolve(__dirname, 'templates/index.template'));
+  const componentTemplate = readAndCleanTemplate(path.resolve(__dirname, '../src/templates/component.template'));
+  const styleTemplate = readAndCleanTemplate(path.resolve(__dirname, '../src/templates/style.template'));
+  const indexTemplate = readAndCleanTemplate(path.resolve(__dirname, '../src/templates/index.template'));
 
   const defaultOptions: IComponentGenOptions = {
       baseName: 'MyTestComponent',

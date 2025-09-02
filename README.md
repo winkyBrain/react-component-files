@@ -107,6 +107,8 @@ Since this extension is not yet published on the VS Code Marketplace, you can bu
     -   Find and select the `.vsix` file generated in the previous step (e.g., `react-component-files-0.0.5.vsix`).
     -   Reload VS Code when prompted.
 
+![How to install from file](assets/howToInstall.png)
+
 ## Release Notes
 
 See [CHANGELOG.md](CHANGELOG.md) for details on each release.
