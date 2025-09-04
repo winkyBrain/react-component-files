@@ -1,8 +1,8 @@
 {
-  "name": "react-component-files",
-  "displayName": "React Component Files",
-  "description": "Quickly generate React component files from a folder.",
-  "version": "0.0.9",
+  "name": "react-quick-component",
+  "displayName": "React Quick Component",
+  "description": "Quickly generate React components from a folder.",
+  "version": "0.1.0",
   "publisher": "winkyBrain",
   "keywords": [
     "react",
@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/winkyBrain/react-component-files.git"
+    "url": "https://github.com/winkyBrain/react-quick-component.git"
   },
   "icon": "assets/icon.png",
   "engines": {
@@ -30,19 +30,19 @@
   "contributes": {
     "commands": [
       {
-        "command": "react-component-files.generateFiles",
+        "command": "react-quick-component.generateFiles",
         "title": "⚛️ Generate React Component"
       },
       {
-        "command": "react-component-files.openComponentTemplate",
+        "command": "react-quick-component.openComponentTemplate",
         "title": "Component Generator: Edit Component Template"
       },
       {
-        "command": "react-component-files.openStyleTemplate",
+        "command": "react-quick-component.openStyleTemplate",
         "title": "Component Generator: Edit Style Template"
       },
       {
-        "command": "react-component-files.openIndexTemplate",
+        "command": "react-quick-component.openIndexTemplate",
         "title": "Component Generator: Edit Index Template"
       }
     ],
@@ -50,15 +50,15 @@
       "explorer/context": [
         {
           "when": "explorerResourceIsFolder",
-          "command": "react-component-files.generateFiles",
+          "command": "react-quick-component.generateFiles",
           "group": "navigation"
         }
       ]
     },
     "configuration": {
-      "title": "React Component Files",
+      "title": "React Quick Component",
       "properties": {
-        "react-component-files.fileExtension": {
+        "react-quick-component.fileExtension": {
           "type": "string",
           "default": "tsx",
           "enum": [
@@ -68,7 +68,7 @@
           "description": "File extension for generated components.",
           "order": 0
         },
-        "react-component-files.fileNameCase": {
+        "react-quick-component.fileNameCase": {
           "type": "string",
           "default": "camelCase",
           "enum": [
@@ -80,19 +80,19 @@
           "description": "Casing for the component folder and file names.",
           "order": 1
         },
-        "react-component-files.createIndexFile": {
+        "react-quick-component.createIndexFile": {
           "type": "boolean",
           "default": true,
           "description": "Create an index file for re-exporting the component.",
           "order": 2
         },
-        "react-component-files.createStyleFile": {
+        "react-quick-component.createStyleFile": {
           "type": "boolean",
           "default": true,
           "description": "Create a style file for the component.",
           "order": 3
         },
-        "react-component-files.styleExtension": {
+        "react-quick-component.styleExtension": {
           "type": "string",
           "default": "scss",
           "enum": [
@@ -104,9 +104,9 @@
           "description": "File extension for generated style modules.",
           "order": 4
         },
-        "react-component-files.editTemplates": {
+        "react-quick-component.editTemplates": {
           "type": "null",
-          "markdownDescription": "[Edit Component Template](command:react-component-files.openComponentTemplate)\n\n[Edit Style Template](command:react-component-files.openStyleTemplate)\n\n[Edit Index Template](command:react-component-files.openIndexTemplate)",
+          "markdownDescription": "[Edit Component Template](command:react-quick-component.openComponentTemplate)\n\n[Edit Style Template](command:react-quick-component.openStyleTemplate)\n\n[Edit Index Template](command:react-quick-component.openIndexTemplate)",
           "default": null,
           "order": 5
         }
