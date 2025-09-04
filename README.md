@@ -56,7 +56,7 @@ Alternatively, you can find clickable links in the extension's settings UI.
 
 ![Extension Settings](assets/settings.png)
 
-> **Note on using `.jsx`:** The default component template includes TypeScript syntax (e.g., `FC` type). If you set the `fileExtension` to `jsx`, you should edit the component template to remove any TypeScript-specific code. Use the `Component Generator: Edit Component Template` command to do this.
+> **Note on using `.jsx`:** The default component template includes TypeScript syntax (e.g., `FC` type). If you set the `fileExtension` to `jsx`, you should edit the component template to remove any TypeScript-specific code. Use the `React Quick Component: Edit Component Template` command to do this.
 
 The following placeholders are available in the templates:
 #### For `component.template`:
