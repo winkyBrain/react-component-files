@@ -1,0 +1,13 @@
+import { FC } from 'react';
+
+import styles from './my-test-component.module.less';
+
+interface Props {}
+
+export const MyTestComponent: FC<Props> = () => {
+  return (
+    <div className={styles.myTestComponent}>
+      MyTestComponent
+    </div>
+  );
+};

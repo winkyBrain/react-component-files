@@ -1,5 +1,5 @@
 
-# React Component Files
+# React Quick Component
 
 Quickly generate React component files (component, style, index) directly from the VS Code explorer context menu. This extension is designed to streamline your workflow by creating a consistent and customizable file structure for your React components.
 
@@ -38,11 +38,11 @@ You can customize the extension's behavior via the VS Code settings (`settings.j
 
 | Setting | Description | Options | Default |
 |---|---|---|---|
-| `react-component-files.fileExtension` | File extension for generated components. | `tsx`, `jsx` | `tsx` |
-| `react-component-files.fileNameCase` | Casing for the component file names. The component name inside the file will always be `PascalCase`. | `PascalCase`, `camelCase`, `kebab-case`, `snake_case` | `camelCase` |
-| `react-component-files.createIndexFile` | Create an `index` file for re-exporting the component. | `true`, `false` | `true` |
-| `react-component-files.createStyleFile` | Create a style file for the component. | `true`, `false` | `true` |
-| `react-component-files.styleExtension` | File extension for generated style modules. | `scss`, `css`, `less`, `sass` | `scss` |
+| `react-quick-component.fileExtension` | File extension for generated components. | `tsx`, `jsx` | `tsx` |
+| `react-quick-component.fileNameCase` | Casing for the component file names. The component name inside the file will always be `PascalCase`. | `PascalCase`, `camelCase`, `kebab-case`, `snake_case` | `camelCase` |
+| `react-quick-component.createIndexFile` | Create an `index` file for re-exporting the component. | `true`, `false` | `true` |
+| `react-quick-component.createStyleFile` | Create a style file for the component. | `true`, `false` | `true` |
+| `react-quick-component.styleExtension` | File extension for generated style modules. | `scss`, `css`, `less`, `sass` | `scss` |
 
 ### How to Edit Templates
 
@@ -78,14 +78,14 @@ Since this extension is not yet published on the VS Code Marketplace, you can bu
 1.  **Clone the repository:**
     *(Replace with your actual repository URL)*
     ```bash
-    git clone https://github.com/winkyBrain/react-component-files.git
+    git clone https://github.com/winkyBrain/react-quick-component.git
     ```
     or with SSH
     ```bash
-    git clone git@github.com:winkyBrain/react-component-files.git
+    git clone git@github.com:winkyBrain/react-quick-component.git
     ```
     ```bash
-    cd react-component-files
+    cd react-quick-component
     ```
 
 3.  **Install dependencies:**
@@ -104,7 +104,7 @@ Since this extension is not yet published on the VS Code Marketplace, you can bu
     -   Go to the **Extensions** view (or press `Ctrl+Shift+X`).
     -   Click the **...** (More Actions) menu in the top-right corner of the view.
     -   Select **Install from VSIX...**.
-    -   Find and select the `.vsix` file generated in the previous step (e.g., `react-component-files-0.0.5.vsix`).
+    -   Find and select the `.vsix` file generated in the previous step (e.g., `react-quick-component-0.1.0.vsix`).
     -   Reload VS Code when prompted.
 
 ![How to install from file](assets/howToInstall.png)

@@ -1,14 +1,15 @@
 import * as path from 'path';
+import { EFileExt, EFileNameCase, EStyleExt } from './constants';
 import { formatName, toPascalCase } from './formatters';
 
 export interface IComponentGenOptions {
   baseName: string;
   folderPath: string;
-  fileExt: string;
-  styleExt: string;
+  fileExt: EFileExt;
+  styleExt: EStyleExt;
   createIndexFile: boolean;
   createStyleFile: boolean;
-  fileNameCase: string;
+  fileNameCase: EFileNameCase;
   componentTemplate: string;
   styleTemplate: string;
   indexTemplate: string;
