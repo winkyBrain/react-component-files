@@ -48,9 +48,9 @@ You can customize the extension's behavior via the VS Code settings (`settings.j
 
 You can easily edit the templates used for file generation. Open the command palette (`Ctrl+Shift+P` or `Cmd+Shift+P`) and search for:
 
--   `Component Generator: Edit Component Template`
--   `Component Generator: Edit Style Template`
--   `Component Generator: Edit Index Template`
+-   `React Quick Component: Edit Component Template`
+-   `React Quick Component: Edit Style Template`
+-   `React Quick Component: Edit Index Template`
 
 Alternatively, you can find clickable links in the extension's settings UI.
 
@@ -76,7 +76,6 @@ The following placeholders are available in the templates:
 Since this extension is not yet published on the VS Code Marketplace, you can build and install it locally by following these steps.
 
 1.  **Clone the repository:**
-    *(Replace with your actual repository URL)*
     ```bash
     git clone https://github.com/winkyBrain/react-quick-component.git
     ```

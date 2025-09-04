@@ -35,15 +35,15 @@
       },
       {
         "command": "react-quick-component.openComponentTemplate",
-        "title": "Component Generator: Edit Component Template"
+        "title": "React Quick Component: Edit Component Template"
       },
       {
         "command": "react-quick-component.openStyleTemplate",
-        "title": "Component Generator: Edit Style Template"
+        "title": "React Quick Component: Edit Style Template"
       },
       {
         "command": "react-quick-component.openIndexTemplate",
-        "title": "Component Generator: Edit Index Template"
+        "title": "React Quick Component: Edit Index Template"
       }
     ],
     "menus": {
