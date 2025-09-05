@@ -1,8 +1,8 @@
 {
-  "name": "react-quick-component",
-  "displayName": "React Quick Component",
+  "name": "react-one-click-component",
+  "displayName": "React One Click Component",
   "description": "Quickly generate React components from a folder.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "winkyBrain",
   "keywords": [
     "react",
@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/winkyBrain/react-quick-component.git"
+    "url": "https://github.com/winkyBrain/react-one-click-component.git"
   },
   "icon": "assets/icon.png",
   "engines": {
@@ -30,35 +30,35 @@
   "contributes": {
     "commands": [
       {
-        "command": "react-quick-component.generateFiles",
+        "command": "react-one-click-component.generateFiles",
         "title": "⚛️ Generate React Component"
       },
       {
-        "command": "react-quick-component.openComponentTemplate",
-        "title": "React Quick Component: Edit Component Template"
+        "command": "react-one-click-component.openComponentTemplate",
+        "title": "React One Click Component: Edit Component Template"
       },
       {
-        "command": "react-quick-component.openStyleTemplate",
-        "title": "React Quick Component: Edit Style Template"
+        "command": "react-one-click-component.openStyleTemplate",
+        "title": "React One Click Component: Edit Style Template"
       },
       {
-        "command": "react-quick-component.openIndexTemplate",
-        "title": "React Quick Component: Edit Index Template"
+        "command": "react-one-click-component.openIndexTemplate",
+        "title": "React One Click Component: Edit Index Template"
       }
     ],
     "menus": {
       "explorer/context": [
         {
           "when": "explorerResourceIsFolder",
-          "command": "react-quick-component.generateFiles",
+          "command": "react-one-click-component.generateFiles",
           "group": "navigation"
         }
       ]
     },
     "configuration": {
-      "title": "React Quick Component",
+      "title": "React One Click Component",
       "properties": {
-        "react-quick-component.fileExtension": {
+        "react-one-click-component.fileExtension": {
           "type": "string",
           "default": "tsx",
           "enum": [
@@ -68,7 +68,7 @@
           "description": "File extension for generated components.",
           "order": 0
         },
-        "react-quick-component.fileNameCase": {
+        "react-one-click-component.fileNameCase": {
           "type": "string",
           "default": "camelCase",
           "enum": [
@@ -80,19 +80,19 @@
           "description": "Casing for the component folder and file names.",
           "order": 1
         },
-        "react-quick-component.createIndexFile": {
+        "react-one-click-component.createIndexFile": {
           "type": "boolean",
           "default": true,
           "description": "Create an index file for re-exporting the component.",
           "order": 2
         },
-        "react-quick-component.createStyleFile": {
+        "react-one-click-component.createStyleFile": {
           "type": "boolean",
           "default": true,
           "description": "Create a style file for the component.",
           "order": 3
         },
-        "react-quick-component.styleExtension": {
+        "react-one-click-component.styleExtension": {
           "type": "string",
           "default": "scss",
           "enum": [
@@ -104,9 +104,9 @@
           "description": "File extension for generated style modules.",
           "order": 4
         },
-        "react-quick-component.editTemplates": {
+        "react-one-click-component.editTemplates": {
           "type": "null",
-          "markdownDescription": "[Edit Component Template](command:react-quick-component.openComponentTemplate)\n\n[Edit Style Template](command:react-quick-component.openStyleTemplate)\n\n[Edit Index Template](command:react-quick-component.openIndexTemplate)",
+          "markdownDescription": "[Edit Component Template](command:react-one-click-component.openComponentTemplate)\n\n[Edit Style Template](command:react-one-click-component.openStyleTemplate)\n\n[Edit Index Template](command:react-one-click-component.openIndexTemplate)",
           "default": null,
           "order": 5
         }

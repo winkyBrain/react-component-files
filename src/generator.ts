@@ -36,7 +36,7 @@ export const generateComponentFiles = (options: IComponentGenOptions): IGenerate
 
   const componentName = toPascalCase(baseName);
   const fileName = formatName(baseName, fileNameCase);
-  const className = formatName(baseName, 'camelCase');
+  const className = formatName(baseName, EFileNameCase.Camel);
 
   const files: IGeneratedFile[] = [];
 

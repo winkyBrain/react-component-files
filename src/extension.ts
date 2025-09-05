@@ -2,7 +2,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as vscode from 'vscode';
-import { ECommands, EConfigKey } from './constants';
+import { ECommands, EConfigKey, EFileExt, EFileNameCase, EStyleExt } from './constants';
 import { toPascalCase } from './formatters';
 import { generateComponentFiles } from './generator';
 import { readAndCleanTemplate, registerTemplateOpenCommands } from './utils';
@@ -18,14 +18,13 @@ export function activate(context: vscode.ExtensionContext) {
     const baseName = path.basename(folderPath);
 
     const config = vscode.workspace.getConfiguration(EConfigKey.Root);
-    const fileExt = config.get<string>('fileExtension', 'tsx');
-    const styleExt = config.get<string>('styleExtension', 'scss');
+    const fileExt = config.get<EFileExt>('fileExtension', EFileExt.Tsx);
+    const styleExt = config.get<EStyleExt>('styleExtension', EStyleExt.Scss);
     const createIndexFile = config.get<boolean>('createIndexFile', true);
     const createStyleFile = config.get<boolean>('createStyleFile', true);
-    const fileNameCase = config.get<string>('fileNameCase', 'PascalCase');
+    const fileNameCase = config.get<EFileNameCase>('fileNameCase', EFileNameCase.Camel);
 
     try {
-      // Пути к файлам шаблонов в папке dist, куда их копирует esbuild
       const componentTemplatePath = path.join(context.extensionPath, 'dist', 'templates', 'component.template');
       const styleTemplatePath = path.join(context.extensionPath, 'dist', 'templates', 'style.template');
       const indexTemplatePath = path.join(context.extensionPath, 'dist', 'templates', 'index.template');
