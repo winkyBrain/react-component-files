@@ -2,7 +2,7 @@
   "name": "react-one-click-component",
   "displayName": "React One Click Component",
   "description": "Quickly generate React components from a folder.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publisher": "winkyBrain",
   "keywords": [
     "react",
@@ -19,6 +19,7 @@
     "url": "https://github.com/winkyBrain/react-one-click-component.git"
   },
   "icon": "assets/icon.png",
+  "browser": false,
   "engines": {
     "vscode": "^1.85.0"
   },
