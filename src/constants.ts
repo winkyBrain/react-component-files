@@ -1,5 +1,5 @@
 export enum EConfigKey {
-  Root = 'react-quick-component',
+  Root = 'react-one-click-component',
 }
 export enum ECommands {
   GenerateFIles = `${EConfigKey.Root}.generateFiles`,

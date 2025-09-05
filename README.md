@@ -1,5 +1,5 @@
 
-# React Quick Component
+# React One Click Component
 
 Quickly generate React component files (component, style, index) directly from the VS Code explorer context menu. This extension is designed to streamline your workflow by creating a consistent and customizable file structure for your React components.
 
@@ -38,25 +38,25 @@ You can customize the extension's behavior via the VS Code settings (`settings.j
 
 | Setting | Description | Options | Default |
 |---|---|---|---|
-| `react-quick-component.fileExtension` | File extension for generated components. | `tsx`, `jsx` | `tsx` |
-| `react-quick-component.fileNameCase` | Casing for the component file names. The component name inside the file will always be `PascalCase`. | `PascalCase`, `camelCase`, `kebab-case`, `snake_case` | `camelCase` |
-| `react-quick-component.createIndexFile` | Create an `index` file for re-exporting the component. | `true`, `false` | `true` |
-| `react-quick-component.createStyleFile` | Create a style file for the component. | `true`, `false` | `true` |
-| `react-quick-component.styleExtension` | File extension for generated style modules. | `scss`, `css`, `less`, `sass` | `scss` |
+| `react-one-click-component.fileExtension` | File extension for generated components. | `tsx`, `jsx` | `tsx` |
+| `react-one-click-component.fileNameCase` | Casing for the component file names. The component name inside the file will always be `PascalCase`. | `PascalCase`, `camelCase`, `kebab-case`, `snake_case` | `camelCase` |
+| `react-one-click-component.createIndexFile` | Create an `index` file for re-exporting the component. | `true`, `false` | `true` |
+| `react-one-click-component.createStyleFile` | Create a style file for the component. | `true`, `false` | `true` |
+| `react-one-click-component.styleExtension` | File extension for generated style modules. | `scss`, `css`, `less`, `sass` | `scss` |
 
 ### How to Edit Templates
 
 You can easily edit the templates used for file generation. Open the command palette (`Ctrl+Shift+P` or `Cmd+Shift+P`) and search for:
 
--   `React Quick Component: Edit Component Template`
--   `React Quick Component: Edit Style Template`
--   `React Quick Component: Edit Index Template`
+-   `React One Click Component: Edit Component Template`
+-   `React One Click Component: Edit Style Template`
+-   `React One Click Component: Edit Index Template`
 
 Alternatively, you can find clickable links in the extension's settings UI.
 
 ![Extension Settings](assets/settings.png)
 
-> **Note on using `.jsx`:** The default component template includes TypeScript syntax (e.g., `FC` type). If you set the `fileExtension` to `jsx`, you should edit the component template to remove any TypeScript-specific code. Use the `React Quick Component: Edit Component Template` command to do this.
+> **Note on using `.jsx`:** The default component template includes TypeScript syntax (e.g., `FC` type). If you set the `fileExtension` to `jsx`, you should edit the component template to remove any TypeScript-specific code. Use the `React One Click Component: Edit Component Template` command to do this.
 
 The following placeholders are available in the templates:
 #### For `component.template`:
@@ -77,14 +77,14 @@ Since this extension is not yet published on the VS Code Marketplace, you can bu
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/winkyBrain/react-quick-component.git
+    git clone https://github.com/winkyBrain/react-one-click-component.git
     ```
     or with SSH
     ```bash
-    git clone git@github.com:winkyBrain/react-quick-component.git
+    git clone git@github.com:winkyBrain/react-one-click-component.git
     ```
     ```bash
-    cd react-quick-component
+    cd react-one-click-component
     ```
 
 3.  **Install dependencies:**
@@ -103,7 +103,7 @@ Since this extension is not yet published on the VS Code Marketplace, you can bu
     -   Go to the **Extensions** view (or press `Ctrl+Shift+X`).
     -   Click the **...** (More Actions) menu in the top-right corner of the view.
     -   Select **Install from VSIX...**.
-    -   Find and select the `.vsix` file generated in the previous step (e.g., `react-quick-component-0.1.0.vsix`).
+    -   Find and select the `.vsix` file generated in the previous step (e.g., `react-one-click-component-0.1.0.vsix`).
     -   Reload VS Code when prompted.
 
 ![How to install from file](assets/howToInstall.png)
